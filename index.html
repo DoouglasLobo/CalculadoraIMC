@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidade com versões do IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
+
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Link para o arquivo de estilo CSS -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Link para a biblioteca Font Awesome -->
+
+    <title>Calculadora IMC</title> <!-- Título da página -->
+</head>
+
+<body>
+    <main id="container">
+        <section id="img">
+            <img src="assets/images/ilustration.svg" alt="Ilustração"> <!-- Imagem ilustrativa -->
+        </section>
+
+        <section id="calculator">
+            <form id="form"> <!-- Formulário para calcular o IMC -->
+                <h1 id="title">
+                    Calculadora IMC
+                </h1>
+
+                <div class="input-box"> <!-- Container para o campo de peso -->
+                    <label for="weight">
+                        Peso em Kg
+                    </label>
+                    <div class="input-field">
+                        <i class="fa-solid fa-weight-hanging"></i> <!-- Ícone de peso -->
+                        <input type="number" id="weight" required step="0.01">
+                        <!-- Campo para inserir peso, permite decimais -->
+                        <span>
+                            Kg
+                        </span>
+                    </div>
+                </div>
+
+                <div class="input-box"> <!-- Container para o campo de altura -->
+                    <label for="height">
+                        Altura em Metros
+                    </label>
+                    <div class="input-field">
+                        <i class="fa-solid fa-ruler"></i> <!-- Ícone de altura -->
+                        <input type="number" id="height" required step="0.01">
+                        <!-- Campo para inserir altura, permite decimais -->
+                        <span>
+                            m
+                        </span>
+                    </div>
+                </div>
+
+                <button id="calculate"> <!-- Botão para calcular o IMC -->
+                    Calcular
+                </button>
+            </form>
+
+            <div id="infos" class="hidden"> <!-- Container para exibir resultados, inicialmente escondido -->
+                <div id="result">
+                    <div id="bmi"> <!-- Div para mostrar o IMC calculado -->
+                        <span id="value"></span> <!-- Valor do IMC -->
+                        <span>Seu IMC</span>
+                    </div>
+                    <div id="description"> <!-- Div para mostrar a descrição do IMC -->
+                        <span></span>
+                    </div>
+                </div>
+                <div id="more_info"> <!-- Link para mais informações sobre IMC -->
+                    <a href="https://mundoeducacao.uol.com.br/saude-bem-estar/imc.htm">
+                        Mais Informações Sobre o IMC
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/script.js"></script> <!-- Link para o arquivo de script JavaScript -->
+</body>
+
+</html>

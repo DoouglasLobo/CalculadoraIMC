@@ -1,0 +1,318 @@
+/* Importa a fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Aplica a fonte, margem, padding e box-sizing a todos os elementos */
+* {
+    font-family: "Poppins", sans-serif;
+    /* Define a fonte padrão */
+    margin: 0;
+    /* Remove a margem padrão */
+    padding: 0;
+    /* Remove o padding padrão */
+    box-sizing: border-box;
+    /* Inclui padding e bordas nas dimensões totais */
+}
+
+/* Estilos para o corpo da página */
+body {
+    display: flex;
+    /* Usa flexbox para centralizar o conteúdo */
+    align-items: center;
+    /* Alinha itens verticalmente ao centro */
+    justify-content: center;
+    /* Alinha itens horizontalmente ao centro */
+    width: 100%;
+    /* Largura total */
+    height: 100vh;
+    /* Altura total da viewport */
+    background-color: #18181b;
+    /* Cor de fundo escura */
+}
+
+/* Estilos para o container principal */
+#container {
+    display: flex;
+    /* Usa flexbox para o layout */
+    align-items: center;
+    /* Alinha itens verticalmente ao centro */
+    gap: 3.5rem;
+    /* Espaço entre os elementos */
+}
+
+/* Estilos para a imagem */
+#img img {
+    width: 32rem;
+    /* Define a largura da imagem */
+}
+
+/* Estilos para a seção do calculador */
+#calculator {
+    display: flex;
+    /* Usa flexbox para a seção */
+    flex-direction: column;
+    /* Organiza os itens em coluna */
+    gap: 2rem;
+    /* Espaço entre os itens */
+    padding: 2rem;
+    /* Padding interno */
+    color: #f8fafc;
+    /* Cor do texto */
+    background-color: #262626;
+    /* Cor de fundo do calculador */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+}
+
+/* Estilos para o formulário */
+#form {
+    display: flex;
+    /* Usa flexbox para o formulário */
+    flex-direction: column;
+    /* Organiza os itens em coluna */
+    gap: 2rem;
+    /* Espaço entre os itens do formulário */
+}
+
+/* Estilos para o título do formulário */
+#title {
+    font-size: 2.25rem;
+    /* Tamanho da fonte do título */
+    position: relative;
+    /* Permite posicionar elementos filhos */
+}
+
+/* Estilos para a linha de destaque abaixo do título */
+#title::after {
+    position: absolute;
+    /* Posicionamento absoluto em relação ao título */
+    content: '';
+    /* Gera um conteúdo vazio */
+    background-color: #0ca5b0;
+    /* Cor da linha */
+    width: 8rem;
+    /* Largura da linha */
+    height: 3px;
+    /* Altura da linha */
+    bottom: 0;
+    /* Posiciona na parte inferior do título */
+    left: 0;
+    /* Alinha à esquerda */
+    border-radius: 3px;
+    /* Bordas arredondadas */
+}
+
+/* Estilos para os rótulos dos campos de entrada */
+.input-box label {
+    font-size: 1.1rem;
+    /* Tamanho da fonte do rótulo */
+    color: #cbd5e1;
+    /* Cor do rótulo */
+    font-weight: 500;
+    /* Peso da fonte */
+}
+
+/* Estilos para os campos de entrada */
+.input-field {
+    display: flex;
+    /* Usa flexbox para o campo */
+    align-items: center;
+    /* Alinha itens verticalmente ao centro */
+    justify-content: space-between;
+    /* Espaço entre os ícones e o input */
+    background-color: #3f3f46;
+    /* Cor de fundo do campo */
+    padding: 0.3rem;
+    /* Padding interno */
+    border-radius: 3px;
+    /* Bordas arredondadas */
+    margin-top: 3px;
+    /* Margem superior */
+}
+
+/* Estilos para o ícone e o texto ao lado do input */
+.input-field span,
+.input-field i {
+    color: #cbd5e1;
+    /* Cor do ícone e texto */
+    font-size: 1.3rem;
+    /* Tamanho da fonte */
+    padding: 0.6rem 1rem;
+    /* Padding interno */
+}
+
+/* Estilos para o campo de entrada */
+.input-field input {
+    background-color: transparent;
+    /* Fundo transparente */
+    border: none;
+    /* Sem borda */
+    width: 100%;
+    /* Largura total */
+    font-size: 1.3rem;
+    /* Tamanho da fonte */
+    color: #f8fafc;
+    /* Cor do texto */
+    padding: 0 0.5rem;
+    /* Padding interno */
+}
+
+/* Remove botões de aumento/diminuição de número em navegadores */
+.input-field input ::-webkit-outer-spin-button,
+.input-field input ::-webkit-inner-spin-button {
+    appearance: none;
+    /* Remove aparência padrão */
+}
+
+/* Estilos para o campo de entrada em foco */
+.input-field input:focus {
+    outline: none;
+    /* Remove o contorno padrão */
+}
+
+/* Estilos para o botão de calcular */
+#calculate {
+    border: none;
+    /* Sem borda */
+    font-size: 1.25rem;
+    /* Tamanho da fonte */
+    font-weight: bold;
+    /* Peso da fonte */
+    background-color: #0ca5b0;
+    /* Cor de fundo do botão */
+    color: #f8fafc;
+    /* Cor do texto */
+    padding: 0.5rem 0;
+    /* Padding interno */
+    border-radius: 3px;
+    /* Bordas arredondadas */
+    cursor: pointer;
+    /* Cursor de mão ao passar sobre o botão */
+}
+
+/* Estilos para a seção de resultados */
+#result {
+    display: flex;
+    /* Usa flexbox para o layout dos resultados */
+    gap: 2rem;
+    /* Espaço entre os elementos */
+    align-items: center;
+    /* Alinha itens verticalmente ao centro */
+    border-top: 1px solid #ffffff34;
+    /* Linha superior com cor e opacidade */
+    padding: 0.75rem 0;
+    /* Padding interno */
+}
+
+/* Estilos para a seção do IMC */
+#bmi {
+    display: flex;
+    /* Usa flexbox para o layout */
+    align-items: center;
+    /* Alinha itens verticalmente ao centro */
+    flex-direction: column;
+    /* Organiza os itens em coluna */
+    font-size: 2.25rem;
+    /* Tamanho da fonte do IMC */
+}
+
+/* Estilos para o texto abaixo do valor do IMC */
+#bmi span:last-child {
+    font-size: 0.875rem;
+    /* Tamanho da fonte */
+    color: #cbd5e1;
+    /* Cor do texto */
+}
+
+/* Estilos para a descrição do resultado */
+#description {
+    width: 15.5rem;
+    /* Largura fixa da descrição */
+}
+
+/* Estilos para o link de mais informações */
+#more_info {
+    text-align: center;
+    /* Centraliza o texto */
+    border-top: 1px solid #ffffff34;
+    /* Linha superior com cor e opacidade */
+    padding-top: 1.5rem;
+    /* Padding superior */
+}
+
+/* Estilos para os links */
+#more_info a {
+    color: #0ca5b0;
+    /* Cor do link */
+    display: flex;
+    /* Usa flexbox para o layout */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    gap: 0.6rem;
+    /* Espaço entre os elementos do link */
+    font-size: 0.875rem;
+    /* Tamanho da fonte */
+    text-decoration: none;
+    /* Remove sublinhado */
+    transition: 0.5s;
+    /* Transição suave ao passar o mouse */
+}
+
+/* Estilos para o efeito hover do link */
+#more_info a:hover {
+    color: #cbd5e1;
+    /* Muda a cor ao passar o mouse */
+}
+
+/* Classe para esconder elementos */
+.hidden {
+    display: none;
+    /* Esconde o elemento */
+}
+
+/* Classe para texto normal */
+.normal {
+    color: #0ca5b0;
+    /* Cor do texto normal */
+}
+
+/* Classe para chamar atenção */
+.attention {
+    color: #dc2626;
+    /* Cor do texto para alertas */
+}
+
+/* Media query para telas com largura máxima de 1024px */
+@media screen and (max-width: 1024px) {
+
+    /* Esconde a seção de imagem em telas menores que 1024px */
+    #img {
+        display: none;
+        /* Oculta a imagem para otimizar o espaço na tela */
+    }
+}
+
+/* Media query para telas com largura máxima de 500px */
+@media screen and (max-width: 500px) {
+
+    /* Estilos para o container principal em telas menores que 500px */
+    #container {
+        width: 100%;
+        /* Define a largura do container para ocupar 100% da tela */
+        height: 100%;
+        /* Define a altura do container para ocupar 100% da tela */
+    }
+
+    /* Estilos para a seção do calculador em telas menores que 500px */
+    #calculator {
+        width: 100%;
+        /* Define a largura do calculador para ocupar 100% da tela */
+        height: 100%;
+        /* Define a altura do calculador para ocupar 100% da tela */
+        border-radius: 0;
+        /* Remove bordas arredondadas para um visual mais quadrado */
+        justify-content: center;
+        /* Centraliza o conteúdo horizontalmente dentro do calculador */
+    }
+}
